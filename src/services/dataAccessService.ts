@@ -34,6 +34,16 @@ module app.service{
                 });
             }
 
+            getRFListO(): any {
+                return this.$resource(`${Env.o_baseUrl}`,null,
+                // {
+                //     'update':{method:'PUT', isArray: true}
+                // });
+                {
+                    'update':{method:'POST', isArray: false, headers: {"origin": "http://45.79.41.54"}}
+                });
+            }
+
             setPoolOwnersResource():any{
                 return this.$resource(`${Env.baseUrl}/Pools/:poolId/owners.json`,null,
                 {

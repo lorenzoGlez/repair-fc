@@ -30,14 +30,28 @@ module app.partList{
     export class PartListCtrl {
 
         parts: IPartSource[];
+        vin: string = "1G8ZK5271VZ354132";
+        oddometer: string = "10000";
+        oddometerType: string = "m";
 
-        static $inject=["$routeParams","dataAccessService"];
-        constructor(private $routeParams, private dataAccessService: service.DataAccessService){
+        static $inject=["$scope", "$routeParams","dataAccessService"];
+        constructor(private $scope, private $routeParams, private dataAccessService: service.DataAccessService){
+            // this.search();
             
-            Promises.getParts(dataAccessService).
+        }
+
+        search(){
+            let payload ={
+                "vin": this.vin,
+                "oddometer": this.oddometer,
+                "oddometertype": this.oddometerType
+            }
+
+            Promises.getPartsO(this.dataAccessService, payload).
             then((data: IPartsResoultSource) => {
                 this.parts = data.results;
                 console.log(this.parts);
+                this.$scope.$apply();
             });
         }
        

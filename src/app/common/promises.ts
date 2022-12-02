@@ -36,6 +36,18 @@ module app{
                 });
             });
         }
+
+        static getPartsO(dataAccessService: app.service.DataAccessService, payload): Promise<app.partList.IPartsResoultSource>{
+            return new Promise((resolve, reject) => {
+                
+                var poolResource = dataAccessService.getRFListO();
+                var po = poolResource.update({}, payload, (data)=>{
+                    resolve(data);
+                }).$promise.catch((reason) => {
+                    reject(reason);
+                });
+            });
+        }
        
     }
 }

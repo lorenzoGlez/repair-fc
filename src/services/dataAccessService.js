@@ -21,6 +21,15 @@ var app;
                     'update': { method: 'PUT', isArray: true, headers: { "origin": "http://45.79.41.54" } }
                 });
             };
+            DataAccessService.prototype.getRFListO = function () {
+                return this.$resource("".concat(app.Env.o_baseUrl), null, 
+                // {
+                //     'update':{method:'PUT', isArray: true}
+                // });
+                {
+                    'update': { method: 'POST', isArray: false, headers: { "origin": "http://45.79.41.54" } }
+                });
+            };
             DataAccessService.prototype.setPoolOwnersResource = function () {
                 return this.$resource("".concat(app.Env.baseUrl, "/Pools/:poolId/owners.json"), null, {
                     'update': { method: 'PUT', isArray: true }
