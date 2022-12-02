@@ -33,6 +33,16 @@ var app;
                 });
             });
         };
+        Promises.getPartsO = function (dataAccessService, payload) {
+            return new Promise(function (resolve, reject) {
+                var poolResource = dataAccessService.getRFListO();
+                var po = poolResource.update({}, payload, function (data) {
+                    resolve(data);
+                }).$promise.catch(function (reason) {
+                    reject(reason);
+                });
+            });
+        };
         return Promises;
     }());
     app.Promises = Promises;
