@@ -9,6 +9,18 @@ var app;
             DataAccessService.prototype.getPreferencesResource = function () {
                 return this.$resource("".concat(app.Env.baseUrl, "/Preferences.json"));
             };
+            DataAccessService.prototype.getRFList = function () {
+                return this.$resource("".concat(app.Env.fb_baseUrl, "/rf-api.json"));
+            };
+            DataAccessService.prototype.getRFListReal = function () {
+                return this.$resource("".concat(app.Env.baseUrl, "/rf_api/search?id=bogus_id&store_id=bogus_store_id&vehicle_year=2018&make=Mazda&model=6&engine=L4-2.5L%20(SKYACTIV-G)&odometer_type=m&odometer_reading=50000"), null, 
+                // {
+                //     'update':{method:'PUT', isArray: true}
+                // });
+                {
+                    'update': { method: 'PUT', isArray: true, headers: { "origin": "http://45.79.41.54" } }
+                });
+            };
             DataAccessService.prototype.setPoolOwnersResource = function () {
                 return this.$resource("".concat(app.Env.baseUrl, "/Pools/:poolId/owners.json"), null, {
                     'update': { method: 'PUT', isArray: true }

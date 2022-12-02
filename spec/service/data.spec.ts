@@ -5,7 +5,7 @@ describe('Data Service', function(){
     
 
     beforeEach(function(){
-        angular.mock.module('fifa');
+        angular.mock.module('repair-fc');
     } );
     
 
@@ -30,7 +30,7 @@ describe('Data Service', function(){
     it('should return preferences', ()=>{
         expect(dataAccessService).toBeDefined();
 
-        $httBackend.expectGET("https://quiniela-fifa-2018.firebaseio.com/Preferences.json").respond(
+        $httBackend.expectGET("https://quiniela-repair-fc-2018.firebaseio.com/Preferences.json").respond(
             {"backupURL":"backup",
             "headersAPI":{"X-Auth-Token":"token"},
             "urlAPI":"urlAPI"

@@ -3,7 +3,8 @@ var app;
     var Env = /** @class */ (function () {
         function Env() {
         }
-        Env.baseUrl = "https://quiniela-fifa-qatar-default-rtdb.firebaseio.com/DEV";
+        Env.baseUrl = "http://45.79.41.54:4000";
+        Env.fb_baseUrl = "https://repair-fc-default-rtdb.firebaseio.com";
         return Env;
     }());
     app.Env = Env;
