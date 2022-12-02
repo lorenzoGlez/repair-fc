@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="icon" href="assets/page-icon.jpeg">
+    <title>Repair Forecaster</title>
+
+    <!-- Style sheets -->
+    <link href="styles/bootstrap.css" rel="stylesheet" />
+    <link href="src/app/pools/pool.css" rel="stylesheet" />
+    <link href="src/app/teams/teams.css" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body ng-app="repair-fc">
+    <!-- <header></header> -->
+    <div class="container">
+        <ng-view></ng-view>
+    </div>
+
+    <!-- Library Scripts -->
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-resource.js"></script>
+    <script src="scripts/angular-mocks.js"></script>
+    <script src="scripts/angular-route.js"></script>
+
+    <!-- Application Script -->
+    <script src="src/app/common/common.js"></script>
+    <script src="environments/environment.js"></script>
+    <script src="src/app/common/promises.js"></script>
+    <script src="src/app.js"></script>
+
+    <!-- Domain Classes -->
+    
+    
+    <!-- Services -->
+    <script src="src/services/dataAccessService.js"></script>
+    
+    <script src="src/services/services.js"></script>
+
+    <!-- Controllers -->
+    <script src="src/app/partList/partList.html"></script>
+
+    <!-- Directives -->
+    <script src="src/app/directives/header.js"></script>
+    
+</body>
+
+</html>
