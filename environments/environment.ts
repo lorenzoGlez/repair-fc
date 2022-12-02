@@ -2,7 +2,8 @@ module app{
 
     export class Env{
 
-        static baseUrl = "https://quiniela-fifa-qatar-default-rtdb.firebaseio.com/DEV"
+        static baseUrl = "http://45.79.41.54:4000";
+        static fb_baseUrl = "https://repair-fc-default-rtdb.firebaseio.com"
 
     }
 }

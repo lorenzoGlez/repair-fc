@@ -15,6 +15,27 @@ module app{
             });
         }
 
+        static getParts(dataAccessService: app.service.DataAccessService): Promise<app.partList.IPartsResoultSource>{
+            return new Promise((resolve, reject) => {
+                var poolResource = dataAccessService.getRFList();
+                poolResource.get((data)=>{
+                    resolve(data);
+                }).$promise.catch((reason) => {
+                    reject(reason);
+                });
+            });
+        }
+
+        static getPartsReal(dataAccessService: app.service.DataAccessService): Promise<app.partList.IPartsResoultSource>{
+            return new Promise((resolve, reject) => {
+                var poolResource = dataAccessService.getRFListReal();
+                var po = poolResource.update({}, null, (data)=>{
+                    resolve(data);
+                }).$promise.catch((reason) => {
+                    reject(reason);
+                });
+            });
+        }
        
     }
 }

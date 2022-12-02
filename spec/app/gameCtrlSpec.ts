@@ -6,7 +6,7 @@ describe('gameListCtrl', function() {
     var createController;
     var scope;
 
-    beforeEach(angular.mock.module('fifa'));
+    beforeEach(angular.mock.module('repair-fc'));
 
     beforeEach(() => {
         inject(function(_$controller_, $rootScope) {

@@ -2,7 +2,7 @@ describe('Data Service', function () {
     var $httBackend;
     var dataAccessService;
     beforeEach(function () {
-        angular.mock.module('fifa');
+        angular.mock.module('repair-fc');
     });
     beforeEach(function () {
         /*inject(function(_$httpBackend_, DataAccessService){
@@ -22,7 +22,7 @@ describe('Data Service', function () {
     });
     it('should return preferences', function () {
         expect(dataAccessService).toBeDefined();
-        $httBackend.expectGET("https://quiniela-fifa-2018.firebaseio.com/Preferences.json").respond({ "backupURL": "backup",
+        $httBackend.expectGET("https://quiniela-repair-fc-2018.firebaseio.com/Preferences.json").respond({ "backupURL": "backup",
             "headersAPI": { "X-Auth-Token": "token" },
             "urlAPI": "urlAPI"
         });
