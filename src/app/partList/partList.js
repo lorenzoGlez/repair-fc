@@ -8,7 +8,7 @@ var app;
                 this.$scope = $scope;
                 this.$routeParams = $routeParams;
                 this.dataAccessService = dataAccessService;
-                this.vin = "1G8ZK5271VZ354132";
+                this.vin = "5NPEC4ABXDH539433";
                 this.oddometer = "10000";
                 this.oddometerType = "m";
             }
