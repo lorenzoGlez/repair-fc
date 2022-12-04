@@ -10,7 +10,12 @@ module app{
                 {
                     templateUrl: "/src/app/partList/partList.html",
                     controller: "PartListCtrl as vm"
-                })          
+                })
+            .when("/login",
+                {
+                    templateUrl: "/src/app/login/login.html",
+                    controller: "LoginCtrl as vm"
+                })                     
             .otherwise({redirectTo: "/partList"});
     }
 }

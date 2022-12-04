@@ -30,7 +30,7 @@ module app.partList{
     export class PartListCtrl {
 
         parts: IPartSource[];
-        vin: string = "1G8ZK5271VZ354132";
+        vin: string = "5NPEC4ABXDH539433";
         oddometer: string = "10000";
         oddometerType: string = "m";
 
